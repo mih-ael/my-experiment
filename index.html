@@ -3,129 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Learn IT Security</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 20px;
             line-height: 1.6;
-            transition: background-color 0.3s, color 0.3s;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: auto;
+            background: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #007bff;
         }
         h1 {
             text-align: center;
         }
         p {
             font-size: 18px;
+            margin-bottom: 20px;
         }
-        .links {
-            margin-top: 20px;
-            text-align: center;
+        ul {
+            margin-bottom: 20px;
         }
-        .links a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 15px;
+        ul li {
+            margin-bottom: 10px;
+        }
+        .resources a {
+            color: #007bff;
             text-decoration: none;
-            color: #fff;
-            background-color: #007bff;
-            border-radius: 5px;
-            transition: background-color 0.3s;
         }
-        .links a:hover {
-            background-color: #0056b3;
-        }
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            cursor: pointer;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        .theme-toggle:hover {
-            background-color: #0056b3;
+        .resources a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
     <div class="container">
-        <h1>About Me</h1>
-        <p>Hello! My name is [Your Name]. I'm currently experimenting with web development and learning how to create and host websites. This page is a simple experiment hosted on GitHub Pages. I'm excited to learn more about HTML, CSS, and how the web works!</p>
+        <h1>Learn IT Security</h1>
         
-        <div class="links">
-            <a href="https://chat.openai.com/" target="_blank">ChatGPT Login</a>
-            <a href="https://www.youtube.com/c/NetworkChuck" target="_blank">NetworkChuck YouTube</a>
-        </div>
+        <h2>Introduction to IT Security</h2>
+        <p>Information Technology (IT) security is the practice of protecting computer systems, networks, and data from digital attacks. Understanding the basics of IT security is essential for anyone working with technology.</p>
+
+        <h2>Basic Concepts</h2>
+        <ul>
+            <li><strong>Confidentiality:</strong> Ensuring that information is accessible only to those authorized to access it.</li>
+            <li><strong>Integrity:</strong> Safeguarding the accuracy and completeness of information and processing methods.</li>
+            <li><strong>Availability:</strong> Ensuring that authorized users have access to information and resources when needed.</li>
+        </ul>
+
+        <h2>Common Threats</h2>
+        <ul>
+            <li><strong>Malware:</strong> Malicious software designed to harm, exploit, or otherwise compromise information or systems.</li>
+            <li><strong>Phishing:</strong> Fraudulent attempts to obtain sensitive information by disguising oneself as a trustworthy entity in electronic communications.</li>
+            <li><strong>Ransomware:</strong> A type of malware that locks or encrypts data, demanding payment for its release.</li>
+            <li><strong>Social Engineering:</strong> Manipulation of individuals to gain unauthorized access to systems or information.</li>
+        </ul>
+
+        <h2>Ethical Hacking</h2>
+        <p>Ethical hacking, also known as penetration testing or white-hat hacking, involves legally breaking into computers and devices to test an organization's defenses. Ethical hackers use their skills to identify vulnerabilities that malicious hackers could exploit.</p>
+
+        <h3>Key Areas of Ethical Hacking</h3>
+        <ul>
+            <li><strong>Reconnaissance:</strong> Gathering information about a target system before launching an attack.</li>
+            <li><strong>Scanning:</strong> Identifying open ports, vulnerabilities, and live systems on a network.</li>
+            <li><strong>Gaining Access:</strong> Using vulnerabilities to gain unauthorized access to systems or data.</li>
+            <li><strong>Maintaining Access:</strong> Establishing backdoors and persistence mechanisms to return to the compromised system.</li>
+            <li><strong>Covering Tracks:</strong> Removing evidence of the attack to avoid detection.</li>
+        </ul>
+        
+        <p>Becoming a certified ethical hacker (CEH) is a common goal for IT security professionals who want to specialize in this field.</p>
+
+        <h2>Best Practices</h2>
+        <ul>
+            <li>Keep software and systems up to date with the latest security patches.</li>
+            <li>Use strong, unique passwords and enable multi-factor authentication (MFA).</li>
+            <li>Regularly back up important data and verify the integrity of backups.</li>
+            <li>Educate yourself and others about the latest threats and phishing tactics.</li>
+            <li>Conduct regular security audits and vulnerability assessments.</li>
+        </ul>
+
+        <h2>Resources</h2>
+        <p>Here are some resources to help you learn more about IT security and ethical hacking:</p>
+        <ul class="resources">
+            <li><a href="https://www.cybrary.it/" target="_blank">Cybrary - Free IT and Cybersecurity Training</a></li>
+            <li><a href="https://www.hackthebox.com/" target="_blank">Hack The Box - Penetration Testing Labs</a></li>
+            <li><a href="https://www.offensive-security.com/information-security-training/online-training/" target="_blank">Offensive Security - Online Training</a></li>
+            <li><a href="https://www.edx.org/course/cybersecurity-fundamentals" target="_blank">edX - Cybersecurity Fundamentals</a></li>
+            <li><a href="https://www.youtube.com/user/NetworkChuck" target="_blank">NetworkChuck - YouTube Channel on IT & Cybersecurity</a></li>
+        </ul>
     </div>
-
-    <script>
-        // Check if a theme is stored in local storage
-        const storedTheme = localStorage.getItem('theme');
-        if (storedTheme) {
-            document.body.classList.add(storedTheme);
-            updateThemeButton(storedTheme);
-        }
-
-        function toggleTheme() {
-            document.body.classList.toggle('dark-theme');
-            const theme = document.body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
-            localStorage.setItem('theme', theme);
-            updateThemeButton(theme);
-        }
-
-        function updateThemeButton(theme) {
-            const button = document.querySelector('.theme-toggle');
-            button.textContent = theme === 'dark-theme' ? 'Light Theme' : 'Dark Theme';
-        }
-
-        // Default to light theme if none is stored
-        if (!storedTheme) {
-            document.body.classList.add('light-theme');
-            updateThemeButton('light-theme');
-        }
-    </script>
-
-    <style id="theme-styles">
-        /* Light Theme Styles */
-        .light-theme {
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .light-theme .container {
-            background-color: #fff;
-            color: #333;
-        }
-        .light-theme .theme-toggle {
-            background-color: #007bff;
-            color: #fff;
-        }
-        /* Dark Theme Styles */
-        .dark-theme {
-            background-color: #333;
-            color: #f4f4f4;
-        }
-        .dark-theme .container {
-            background-color: #444;
-            color: #f4f4f4;
-        }
-        .dark-theme .theme-toggle {
-            background-color: #007bff;
-            color: #fff;
-        }
-    </style>
 </body>
 </html>
